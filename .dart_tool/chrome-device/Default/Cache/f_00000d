@@ -1,0 +1,474 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/google_maps_flutter_platform_interface/src/types/utils/tile_overlay.dart', 'packages/google_maps_flutter_platform_interface/src/types/bitmap.dart', 'packages/flutter/src/painting/_network_image_web.dart', 'packages/google_maps_flutter_platform_interface/src/types/location.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/google_maps_flutter/google_maps_flutter.dart', 'packages/flutter/src/widgets/bottom_navigation_bar_item.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart'], (function load__packages__flash_chat__screens__map_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart, packages__google_maps_flutter_platform_interface__src__types__bitmap$46dart, packages__flutter__src__painting___network_image_web$46dart, packages__google_maps_flutter_platform_interface__src__types__location$46dart, packages__flutter__src__material__icon_button$46dart, packages__google_maps_flutter__google_maps_flutter$46dart, packages__flutter__src__widgets__bottom_navigation_bar_item$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const collection = dart_sdk.collection;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const marker = packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart.src__types__marker;
+  const camera = packages__google_maps_flutter_platform_interface__src__types__utils__tile_overlay$46dart.src__types__camera;
+  const bitmap = packages__google_maps_flutter_platform_interface__src__types__bitmap$46dart.src__types__bitmap;
+  const image_provider = packages__flutter__src__painting___network_image_web$46dart.src__painting__image_provider;
+  const location = packages__google_maps_flutter_platform_interface__src__types__location$46dart.src__types__location;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const bottom_navigation_bar = packages__flutter__src__material__icon_button$46dart.src__material__bottom_navigation_bar;
+  const google_maps_flutter = packages__google_maps_flutter__google_maps_flutter$46dart.google_maps_flutter;
+  const bottom_navigation_bar_item = packages__flutter__src__widgets__bottom_navigation_bar_item$46dart.src__widgets__bottom_navigation_bar_item;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  var map_screen = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    MarkerL: () => (T.MarkerL = dart.constFn(dart.legacy(marker.Marker)))(),
+    LinkedHashSetOfMarkerL: () => (T.LinkedHashSetOfMarkerL = dart.constFn(collection.LinkedHashSet$(T.MarkerL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    BottomNavigationBarItemL: () => (T.BottomNavigationBarItemL = dart.constFn(dart.legacy(bottom_navigation_bar_item.BottomNavigationBarItem)))(),
+    JSArrayOfBottomNavigationBarItemL: () => (T.JSArrayOfBottomNavigationBarItemL = dart.constFn(_interceptors.JSArray$(T.BottomNavigationBarItemL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "initialCameraPosition",
+        [_Location_column]: 23,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onMapCreated",
+        [_Location_column]: 9,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "markers",
+        [_Location_column]: 9,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 36,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 65,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 36,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 69,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 78,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 81,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34], T._LocationL());
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 82,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "items",
+        [_Location_column]: 9,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottomNavigationBar",
+        [_Location_column]: 7,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/Users/Asus/AndroidStudioProjects/pantofit%20premium/lib/screens/map_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(42).fill(void 0);
+  var I = ["package:flash_chat/screens/map_screen.dart"];
+  map_screen.MapScreen = class MapScreen extends framework.StatefulWidget {
+    createState() {
+      return new map_screen._MapScreenState.new();
+    }
+  };
+  (map_screen.MapScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    map_screen.MapScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = map_screen.MapScreen.prototype;
+  dart.addTypeTests(map_screen.MapScreen);
+  dart.addTypeCaches(map_screen.MapScreen);
+  dart.setMethodSignature(map_screen.MapScreen, () => ({
+    __proto__: dart.getMethods(map_screen.MapScreen.__proto__),
+    createState: dart.fnType(dart.legacy(map_screen._MapScreenState), [])
+  }));
+  dart.setLibraryUri(map_screen.MapScreen, I[0]);
+  dart.defineLazy(map_screen.MapScreen, {
+    /*map_screen.MapScreen.id*/get id() {
+      return "map_screen";
+    },
+    set id(_) {}
+  }, true);
+  var _markers = dart.privateName(map_screen, "_markers");
+  var _onMapCreated = dart.privateName(map_screen, "_onMapCreated");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  map_screen._MapScreenState = class _MapScreenState extends framework.State$(dart.legacy(map_screen.MapScreen)) {
+    initState() {
+      super.initState();
+      this.setCustomMarker();
+    }
+    setCustomMarker() {
+      return async.async(dart.void, (function* setCustomMarker() {
+        this.mapMarker = (yield bitmap.BitmapDescriptor.fromAssetImage(new image_provider.ImageConfiguration.new({size: new ui.Size.new(40.0, 40.0)}), "images/location-pin.png"));
+      }).bind(this));
+    }
+    [_onMapCreated](controller) {
+      controller.setMapStyle(map_screen.Utils.mapStyle);
+      this.setState(dart.fn(() => {
+        this[_markers].add(new marker.Marker.new({markerId: new marker.MarkerId.new("Pro Gym"), icon: this.mapMarker, position: new location.LatLng.new(33.71115830916527, -7.345940790768825), infoWindow: new marker.InfoWindow.new({title: "Pro Gym", snippet: "5500m 3etage avec accées piscine et coahing personnalisé"})}));
+        this[_markers].add(new marker.Marker.new({markerId: new marker.MarkerId.new("Alpha Form"), position: new location.LatLng.new(31.653649371343874, -8.050956094758602)}));
+        this[_markers].add(new marker.Marker.new({markerId: new marker.MarkerId.new("Nausika Fitness"), position: new location.LatLng.new(34.023387055271584, -5.015746911903754)}));
+      }, T.VoidToNull()));
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({body: new google_maps_flutter.GoogleMap.new({initialCameraPosition: new camera.CameraPosition.new({target: new location.LatLng.new(33.699505817254334, -7.396500489329218), zoom: 6.5}), onMapCreated: dart.bind(this, _onMapCreated), markers: this[_markers], $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), bottomNavigationBar: new bottom_navigation_bar.BottomNavigationBar.new({items: T.JSArrayOfBottomNavigationBarItemL().of([new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.map, {$creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), title: new text.Text.new("ferf", {$creationLocationd_0dea112b090073317d4: C[8] || CT.C8})}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.payment, {$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), title: new text.Text.new("ferf", {$creationLocationd_0dea112b090073317d4: C[14] || CT.C14})}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.settings_overscan, {$creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), title: new text.Text.new("ferf", {$creationLocationd_0dea112b090073317d4: C[20] || CT.C20})}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.person, {$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), title: new text.Text.new("ferf", {$creationLocationd_0dea112b090073317d4: C[26] || CT.C26})}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.settings, {$creationLocationd_0dea112b090073317d4: C[29] || CT.C29}), title: new text.Text.new("ferf", {$creationLocationd_0dea112b090073317d4: C[32] || CT.C32})})]), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38});
+    }
+  };
+  (map_screen._MapScreenState.new = function() {
+    this[_markers] = T.LinkedHashSetOfMarkerL().new();
+    this.mapMarker = null;
+    map_screen._MapScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = map_screen._MapScreenState.prototype;
+  dart.addTypeTests(map_screen._MapScreenState);
+  dart.addTypeCaches(map_screen._MapScreenState);
+  dart.setMethodSignature(map_screen._MapScreenState, () => ({
+    __proto__: dart.getMethods(map_screen._MapScreenState.__proto__),
+    setCustomMarker: dart.fnType(dart.void, []),
+    [_onMapCreated]: dart.fnType(dart.void, [dart.legacy(google_maps_flutter.GoogleMapController)]),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(map_screen._MapScreenState, I[0]);
+  dart.setFieldSignature(map_screen._MapScreenState, () => ({
+    __proto__: dart.getFields(map_screen._MapScreenState.__proto__),
+    [_markers]: dart.fieldType(dart.legacy(core.Set$(dart.legacy(marker.Marker)))),
+    mapMarker: dart.fieldType(dart.legacy(bitmap.BitmapDescriptor))
+  }));
+  map_screen.Utils = class Utils extends core.Object {};
+  (map_screen.Utils.new = function() {
+    ;
+  }).prototype = map_screen.Utils.prototype;
+  dart.addTypeTests(map_screen.Utils);
+  dart.addTypeCaches(map_screen.Utils);
+  dart.setLibraryUri(map_screen.Utils, I[0]);
+  dart.defineLazy(map_screen.Utils, {
+    /*map_screen.Utils.mapStyle*/get mapStyle() {
+      return "  [\n  {\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#212121\"\n      }\n    ]\n  },\n  {\n    \"elementType\": \"labels.icon\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#757575\"\n      }\n    ]\n  },\n  {\n    \"elementType\": \"labels.text.stroke\",\n    \"stylers\": [\n      {\n        \"color\": \"#212121\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"administrative\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#757575\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"administrative.country\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#9e9e9e\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"administrative.land_parcel\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"administrative.locality\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#bdbdbd\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#757575\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi.business\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi.park\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#181818\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi.park\",\n    \"elementType\": \"labels.text\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi.park\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#616161\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"poi.park\",\n    \"elementType\": \"labels.text.stroke\",\n    \"stylers\": [\n      {\n        \"color\": \"#1b1b1b\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road\",\n    \"elementType\": \"geometry.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#2c2c2c\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#8a8a8a\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.arterial\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#373737\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.arterial\",\n    \"elementType\": \"labels\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.highway\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#3c3c3c\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.highway\",\n    \"elementType\": \"labels\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.highway.controlled_access\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#4e4e4e\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.local\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road.local\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#616161\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"transit\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#757575\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"water\",\n    \"elementType\": \"geometry\",\n    \"stylers\": [\n      {\n        \"color\": \"#000000\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"water\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"color\": \"#3d3d3d\"\n      }\n    ]\n  }\n]\n  ";
+    },
+    set mapStyle(_) {}
+  }, true);
+  dart.trackLibraries("packages/flash_chat/screens/map_screen.dart", {
+    "package:flash_chat/screens/map_screen.dart": map_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["map_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQmC;IAAiB;;;;;;EACpD;;;;;;;;;MAHgB,uBAAE;YAAC;;;;;;;;;;;;;AAWE,MAAX;AACW,MAAjB;IACF;;AAEoB;AACkG,QAApH,kBAAY,MAAuB,uCAAe,iDAAyB,gBAAK,MAAI,SAAM;MAE5F;;oBAEuC;AACC,MAAtC,AAAW,UAAD,aAAmB;AAoB3B,MAnBF,cAAS;AAYN,QAXD,AAAS,mBACP,iCACc,wBAAS,kBACb,0BACG,wBAAO,mBAAmB,CAAC,gCACxB,kCACH,oBACE;AAOhB,QAFD,AAAS,mBACP,iCAAiB,wBAAS,yBAAwB,wBAAO,oBAAoB,CAAC;AAI/E,QAFD,AAAS,mBACP,iCAAiB,wBAAS,8BAA6B,wBAAO,oBAAoB,CAAC;;IAIzF;UAE0B;AACxB,YAAO,kCACC,8DAAiC,uCAC3B,wBAAO,oBAAoB,CAAC,0BAC9B,+BAEM,+BACL,8FAEW,0DAEb,0CACL,kEACc,kBAAW,kFACd,kBAAK,oEAEhB,kEACc,kBAAW,wFACd,kBAAK,sEAEhB,kEACU,kBAAW,kGACV,kBAAK,sEAEhB,kEACU,kBAAW,uFACV,kBAAK,sEAEhB,kEACU,kBAAW,yFACV,kBAAK;IAKxB;;;IA1EY,iBAAW;IACN;;;EA0EnB;;;;;;;;;;;;;;;;;;EA0OA;;;;;MAvOgB,yBAAQ;YAAG","file":"../../../../../../packages/flash_chat/screens/map_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__map_screen: map_screen
+  };
+}));
+
+//# sourceMappingURL=map_screen.dart.lib.js.map

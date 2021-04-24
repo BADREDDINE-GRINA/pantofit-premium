@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434136092005",
+    "project_id": "pantofit-premium",
+    "storage_bucket": "pantofit-premium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434136092005:android:88d5a82834b6e5cd6aa58c",
+        "android_client_info": {
+          "package_name": "co.pantofit.pantofit_premium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434136092005-a26littl5r3bc7qmhkjdibir8hu48ogh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzt3QRgyXBZGycxZ9-Jj1iOOYhLNoT-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434136092005-a26littl5r3bc7qmhkjdibir8hu48ogh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
